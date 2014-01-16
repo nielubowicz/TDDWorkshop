@@ -16,7 +16,11 @@ var car = {
 		return this.year < 1985 ? "chugga chugga vroom vroom!" : "vroom vroom!";
 	},
 	putTopUp : function() {
-		this.isTopUp = true;
+		if (this.canFly && this.isConvertable && this.altitude > 3000) {
+			this.isTopUp = false;
+		} else {
+			this.isTopUp = true;
+		}
 		return this.isTopUp;
 	},
 	putTopDown : function() {

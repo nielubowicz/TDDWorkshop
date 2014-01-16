@@ -38,12 +38,19 @@ vows.describe('Car').addBatch({
 			if (testCar.canFly) {
 				assert.isDefined(testCar.altitude);
 			} 
+		},
+		'it should not be able to pop its top if its a convertable and over 3000 feet' : function(testCar) {
+			if (testCar.canFly && testCar.isConvertable) {
+				testCar.altitude = 3001;
+				assert.equal (testCar.putTopUp(), false);
+			} 
 		}
 	},
 	'If a car is a converable' : {
 		topic : car,
-		'it should be able to put its top up' : function(testCar) {
+		'it should be able to put its top up if its lower than 3000 feet' : function(testCar) {
 			if (testCar.isConvertable) {
+				testCar.altitude = 10;
 				assert.equal(testCar.putTopUp(), true);
 			} 
 		},
