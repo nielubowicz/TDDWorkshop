@@ -27,6 +27,9 @@ vows.describe('Car').addBatch({
 		topic : car,
 		'should be able to fly' : function(testCar) {
 			assert.isDefined(testCar.canFly);
+		},
+		'should be able to be a convertable' : function(testCar) {
+			assert.isDefined(testCar.isConvertable);
 		}
 	},
 	'If a car can fly' : {
@@ -34,6 +37,19 @@ vows.describe('Car').addBatch({
 		'it should also know its altitude' : function(testCar) {
 			if (testCar.canFly) {
 				assert.isDefined(testCar.altitude);
+			} 
+		}
+	},
+	'If a car is a converable' : {
+		topic : car,
+		'it should be able to put its top up' : function(testCar) {
+			if (testCar.isConvertable) {
+				assert.equal(testCar.putTopUp(), true);
+			} 
+		},
+		'it should be able to put its top down' : function(testCar) {
+			if (testCar.isConvertable) {
+				assert.equal(testCar.putTopDown(), false);
 			} 
 		}
 	}
