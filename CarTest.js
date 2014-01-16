@@ -22,13 +22,5 @@ vows.describe('Car').addBatch({
 			testCar.year = 1997;
          	assert.equal (testCar.start(), "vroom vroom!");
         }
-    },
-	'If a car can fly' : {
-		topic : car,
-		'it should also know its altitude' : function(testCar) {
-			if (testCar.canFly) {
-				assert.isDefined(testCar.altitude);
-			} 
-		}
-	}
+    }
 }).run();
