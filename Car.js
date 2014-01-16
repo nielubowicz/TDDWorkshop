@@ -5,6 +5,8 @@ var car = {
 	make	: "Citroen",
 	model	: "DS",
 	year	: 1975,
+	canFly	: true,
+	altitude: 1000,
 	getName : function() {
 		return this.year + " " + this.make + " " + this.model;
 	},

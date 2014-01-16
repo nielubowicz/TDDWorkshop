@@ -23,6 +23,12 @@ vows.describe('Car').addBatch({
          	assert.equal (testCar.start(), "vroom vroom!");
         }
     },
+	'A car' : {
+		topic : car,
+		'should be able to fly' : function(testCar) {
+			assert.isDefined(testCar.canFly);
+		}
+	},
 	'If a car can fly' : {
 		topic : car,
 		'it should also know its altitude' : function(testCar) {
@@ -31,4 +37,5 @@ vows.describe('Car').addBatch({
 			} 
 		}
 	}
+
 }).run();

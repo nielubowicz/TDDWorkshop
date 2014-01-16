@@ -1,0 +1,38 @@
+
+
+= Anatomy of a test suite
+
+- Code you are exercising "Unit" -- Good to bake business logic into models so they are easy to test
+- Test Suite - The group of tests that will be executed when tests are run
+- Topic - The object or class that will be exercised in the test
+- Test metadata - The plain english statement that describes what is being tested, and what the desired outcome should be
+- Unit test- Sourcecode that exercises the smallest possible unit of sourcecode
+- Assertion - The statement in the unit test that asserts the expected value is equal to the actual value returned
+
+= TDD Exercieses
+
+== Excercise 1 : Let's make a flying car!
+- Run existing test suite and watch it pass.
+- Write a test that ensures a car canFly
+- Write a test that determines if a car can fly, it should have a notion of altitude
+- Run the tests and watch them fail
+- Make a car able to fly
+- Run the tests and watch one pass, and one fail
+- Write the code to implement altitude
+- Run the tests and watch them pass
+
+== Exeecise 2 : Make it a convertable
+- Write a test that determines if the car is a convertable, it should have two methods that put the top down, and put the top up. The methods should return the state of the top: "down" or "up"
+- Run the test, watch it fail
+- Implement the code
+- Run tests, watch them pass
+
+== Exercise 3 : Flying Convertables??
+- If a car can fly, and its altitude is greater than 3000 feet, the top should not be able to open...right???
+- Write the test
+- Run the tests, and watch it fail
+- Implement the code
+- Run the test and watch it pass
+
+== Exercise 4 : Implement your own new feature!
+- you know how to do it!
