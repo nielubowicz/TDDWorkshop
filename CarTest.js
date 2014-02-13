@@ -33,4 +33,9 @@ describe('Car', function() {
             }
         })
     })
+
+    it('should be able to be a convertable', function() {
+        should.exist(testCar.isConvertable);
+    })
+
 });
