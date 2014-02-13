@@ -32,10 +32,27 @@ describe('Car', function() {
                 should.exist(testCar.altitude);
             }
         })
+
+        it('should not be able to put its top down if it\'s a convertable', function() {
+            if(testCar.canFly && testCar.isConvertable) {
+                testCar.altitude = 3001;
+                should.equal(testCar.putTopDown(), false);
+            }
+        })
     })
 
-    it('should be able to be a convertable', function() {
-        should.exist(testCar.isConvertable);
-    })
+    describe('If a car is a convertable', function() {
+        it('should be able to put its top up if it\'s lower than 3000ft', function() {
+            if(testCar.isConvertable) {
+                testCar.altitude = 100;
+                should.equal(testCar.putTopUp(), true);
+            }
+        })
 
+        it('should always be able to put its top down', function() {
+            if(testCar.isConvertable) {
+                should.equal(testCar.putTopDown(), true);
+            }
+        })
+    })
 });
