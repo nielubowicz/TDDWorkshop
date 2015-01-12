@@ -1,2 +1,2 @@
 4 cylinders
-9000 HP
+440 Horsepower
