@@ -1,2 +1,4 @@
 4 cylinders
-9000 HP
+440 Horsepower
+6 cylinders
+Change seals
